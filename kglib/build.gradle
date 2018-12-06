@@ -55,6 +55,9 @@ dependencies {
     api "com.jakewharton.rxbinding3:rxbinding-material:$rootProject.rxbinding"
     api "com.github.tbruyelle:rxpermissions:$rootProject.rxpermissions"
 
+    api "org.jetbrains.anko:anko-commons:$rootProject.anko_version"
+    api "org.jetbrains.anko:anko-design:$rootProject.anko_version"
+
     api "com.github.bumptech.glide:glide:$rootProject.glide"
     annotationProcessor "com.github.bumptech.glide:compiler:$rootProject.glide"
 }
