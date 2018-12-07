@@ -10,6 +10,7 @@ class RuleUtils {
         /**
          * 将dp转换成对应的px值
          */
+        @JvmStatic
         fun dp2Px(dp: Float): Int {
             val metrics = ContextUtils.appContext.resources.displayMetrics
             return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, metrics).toInt()
@@ -18,6 +19,7 @@ class RuleUtils {
         /**
          * 将px转换成对应的dp值
          */
+        @JvmStatic
         fun px2Dp(px: Float): Int {
             val scale = ContextUtils.appContext.resources.displayMetrics.density
             return (px / scale + 0.5f).toInt()
@@ -26,6 +28,7 @@ class RuleUtils {
         /**
          * 将sp转换成对应的px值
          */
+        @JvmStatic
         fun sp2Px(sp: Float): Int {
             val metrics = ContextUtils.appContext.resources.displayMetrics
             return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, sp, metrics).toInt()

@@ -9,6 +9,7 @@ class ContextUtils {
     companion object {
         lateinit var appContext: Context
 
+        @JvmStatic
         fun init(context: Context) {
             appContext = context.applicationContext
         }

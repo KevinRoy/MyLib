@@ -9,10 +9,10 @@ import android.preference.PreferenceManager
  */
 class SharedPreferencesUtils {
     companion object {
-
         /**
          * 获取
          */
+        @JvmStatic
         fun <T> get(key: String, defValue: T): T {
             when (defValue) {
                 String -> return getPreference().getString(key, defValue as String) as T
@@ -28,6 +28,7 @@ class SharedPreferencesUtils {
         /**
          * 保存
          */
+        @JvmStatic
         fun <T> save(key: String, value: T): Boolean {
             val editor = getPreference().edit()
             when (value) {
@@ -44,10 +45,12 @@ class SharedPreferencesUtils {
         /**
          * 初始化
          */
+        @JvmStatic
         fun getPreference(): SharedPreferences {
             return PreferenceManager.getDefaultSharedPreferences(ContextUtils.appContext)
         }
 
+        @JvmStatic
         fun getPreference(name: String): SharedPreferences {
             return ContextUtils.appContext.getSharedPreferences(name, 0)
         }
